@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piscina | Acqua Piscinas E Jardinagem</title>
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="pagina-piscina">
+
+  <!-- MENU PRINCIPAL -->
+  <header class="topbar">
+    <div class="container-menu">
+      <a href="index.html" class="logo-menu">
+        <img src="img/logo.jpg" alt="Acqua Piscinas E Jardinagem">
+      </a>
+
+      <nav class="menu-links">
+        <a href="index.html">Início</a>
+        <a href="jardinagem.html">Jardinagem</a>
+        <a href="piscina.html">Piscina</a>
+        <a href="https://wa.me/554198724587" target="_blank" class="btn-menu">
+          WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- WHATSAPP FIXO -->
+  <a href="https://wa.me/554198724587?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20serviços%20de%20piscina."
+    class="whatsapp-fixo" target="_blank">
+    <span class="icone"></span>
+    <span class="texto">Solicite um orçamento</span>
+  </a>
+
+  <!-- BANNER -->
+  <header class="banner banner-piscina">
+    <h1>Serviços de Piscina</h1>
+    <a href="index.html" class="btn-voltar">← Voltar</a>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <section class="conteudo">
+    <h2>Cuidamos da sua piscina com qualidade e experiência</h2>
+
+    <p>
+      Trabalhamos com manutenção e tratamento completo de piscinas
+      residenciais e comerciais. Atendimento em Curitiba,
+      Colombo e região metropolitana.
+    </p>
+
+    <ul class="lista-servicos">
+      <li>Contratos mensais</li>
+      <li>Limpeza e tratamento da água</li>
+      <li>Aspiração e escovação</li>
+      <li>Troca de areia do filtro</li>
+      <li>Manutenção preventiva</li>
+      <li>Tratamento de água verde</li>
+      <li>Instalação e manutenção de equipamentos</li>
+    </ul>
+
+    <a href="https://wa.me/554198724587?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20serviços%20de%20piscina."
+      class="btn-grande azul">
+      Solicitar Orçamento
+    </a>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="galeria">
+    <h2>Trabalhos Realizados</h2>
+
+    <div class="carrossel-container">
+      <button class="seta esquerda">&#10094;</button>
+
+      <div class="carrossel" id="carrossel">
+        <img src="img/piscina/piscina1.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/piscina/piscina2.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/piscina/piscina3.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/piscina/piscina4.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/piscina/piscina6.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/piscina/piscina7.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/piscina/piscina8.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/piscina/piscina9.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/piscina/piscina10.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/piscina/piscina11.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/piscina/piscina12.jpeg" onclick="abrirModal(this.src)">
+      </div>
+
+      <button class="seta direita">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal">
+    <span class="fechar" onclick="fecharModal()">&times;</span>
+
+    <button class="modal-seta esquerda-modal">&#10094;</button>
+    <img class="modal-conteudo" id="imagemModal">
+    <button class="modal-seta direita-modal">&#10095;</button>
+  </div>
+
+  <script>
+    const imagens = [
+      "img/piscina/piscina1.jpeg",
+      "img/piscina/piscina2.jpeg",
+      "img/piscina/piscina3.jpeg",
+      "img/piscina/piscina4.jpeg",
+      "img/piscina/piscina6.jpeg",
+      "img/piscina/piscina7.jpeg",
+      "img/piscina/piscina8.jpeg",
+      "img/piscina/piscina9.jpeg",
+      "img/piscina/piscina10.jpeg",
+      "img/piscina/piscina11.jpeg",
+      "img/piscina/piscina12.jpeg"
+    ];
+
+    let imagemAtual = 0;
+
+ function abrirModal(src) {
+  const nomeArquivo = src.split("/").pop(); // pega só piscina1.jpeg
+
+  imagemAtual = imagens.findIndex(img => img.includes(nomeArquivo));
+
+  document.getElementById("modal").style.display = "flex";
+  document.getElementById("imagemModal").src = imagens[imagemAtual];
+}
+
+    function fecharModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+
+    function proximaImagem() {
+      imagemAtual = (imagemAtual + 1) % imagens.length;
+      document.getElementById("imagemModal").src = imagens[imagemAtual];
+    }
+
+    function imagemAnterior() {
+      imagemAtual = (imagemAtual - 1 + imagens.length) % imagens.length;
+      document.getElementById("imagemModal").src = imagens[imagemAtual];
+    }
+
+    document.querySelector(".direita-modal").onclick = proximaImagem;
+    document.querySelector(".esquerda-modal").onclick = imagemAnterior;
+
+    document.addEventListener("keydown", function(e) {
+      if (document.getElementById("modal").style.display === "flex") {
+        if (e.key === "ArrowRight") proximaImagem();
+        if (e.key === "ArrowLeft") imagemAnterior();
+        if (e.key === "Escape") fecharModal();
+      }
+    });
+
+    document.getElementById("modal").addEventListener("click", function(e) {
+      if (e.target === this) {
+        fecharModal();
+      }
+    });
+
+    const carrossel = document.getElementById("carrossel");
+    const btnEsquerda = document.querySelector(".seta.esquerda");
+    const btnDireita = document.querySelector(".seta.direita");
+
+    btnDireita.addEventListener("click", () => {
+      carrossel.scrollBy({
+        left: 300,
+        behavior: "smooth"
+      });
+    });
+
+    btnEsquerda.addEventListener("click", () => {
+      carrossel.scrollBy({
+        left: -300,
+        behavior: "smooth"
+      });
+    });
+
+  </script>
+
+</body>
+</html>

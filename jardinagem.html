@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jardinagem | Acqua Piscinas E Jardinagem</title>
+
+  <!-- MENU PRINCIPAL -->
+  <header class="topbar">
+    <div class="container-menu">
+      <a href="index.html" class="logo-menu">
+        <img src="img/logo.jpg" alt="Acqua Piscinas E Jardinagem">
+      </a>
+
+      <nav class="menu-links">
+        <a href="index.html">Início</a>
+        <a href="jardinagem.html">Jardinagem</a>
+        <a href="piscina.html">Piscina</a>
+        <a href="https://wa.me/554198724587" target="_blank" class="btn-menu">
+          WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="pagina-jardinagem">
+
+  <!-- WHATSAPP FIXO -->
+  <a href="https://wa.me/554198724587?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20serviços%20de%20jardinagem."
+    class="whatsapp-fixo" target="_blank">
+
+    <span class="icone"></span>
+    <span class="texto">Solicite um orçamento</span>
+
+  </a>
+
+  <header class="banner banner-jardinagem">
+    <h1>Serviços de Jardinagem</h1>
+    <a href="index.html" class="btn-voltar">← Voltar</a>
+  </header>
+
+  <section class="conteudo">
+    <h2>Cuidamos do seu jardim com qualidade e experiência</h2>
+    <p>
+      Atuamos há aproximadamente 10 anos oferecendo serviços completos
+      de jardinagem em Curitiba, Colombo e região metropolitana.
+      Atendimento residencial e comercial.
+    </p>
+
+    <ul class="lista-servicos">
+      <li>Contratos mensais</li>
+      <li>Poda de árvores</li>
+      <li>Corte de grama</li>
+      <li>Limpeza de lotes e terrenos</li>
+      <li>Aplicação de veneno</li>
+      <li>Venda e plantio de mudas</li>
+      <li>Manutenção geral de jardins</li>
+    </ul>
+
+    <a href="https://wa.me/554198724587?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20serviços%20de%20jardinagem."
+      class="btn-grande verde">
+      Solicitar Orçamento
+    </a>
+  </section>
+
+  <section class="galeria">
+    <h2>Trabalhos Realizados</h2>
+
+    <div class="carrossel-container">
+      <button class="seta esquerda">&#10094;</button>
+
+      <div class="carrossel" id="carrossel">
+        <img src="img/jardinagem/jardim1.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/jardinagem/jardim2.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/jardinagem/jardim3.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/jardinagem/jardim4.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/jardinagem/jardim5.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/jardinagem/jardim6.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/jardinagem/jardim7.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/jardinagem/jardim8.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/jardinagem/jardim9.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/jardinagem/jardim10.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/jardinagem/jardim11.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/jardinagem/jardim12.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/jardinagem/jardim13.jpeg" onclick="abrirModal(this.src)">
+        <img src="img/jardinagem/jardim14.jpeg" onclick="abrirModal(this.src)">
+      </div>
+
+      <button class="seta direita">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal">
+    <span class="fechar" onclick="fecharModal()">&times;</span>
+
+    <button class="modal-seta esquerda-modal">&#10094;</button>
+    <img class="modal-conteudo" id="imagemModal">
+    <button class="modal-seta direita-modal">&#10095;</button>
+  </div>
+
+
+  <script>
+    const imagens = [
+      "img/jardinagem/jardim1.jpeg",
+      "img/jardinagem/jardim2.jpeg",
+      "img/jardinagem/jardim3.jpeg",
+      "img/jardinagem/jardim4.jpeg",
+      "img/jardinagem/jardim5.jpeg",
+      "img/jardinagem/jardim6.jpeg",
+      "img/jardinagem/jardim7.jpeg",
+      "img/jardinagem/jardim8.jpeg",
+      "img/jardinagem/jardim9.jpeg",
+      "img/jardinagem/jardim10.jpeg",
+      "img/jardinagem/jardim11.jpeg",
+      "img/jardinagem/jardim12.jpeg",
+      "img/jardinagem/jardim13.jpeg",
+      "img/jardinagem/jardim14.jpeg"
+    ];
+
+    let imagemAtual = 0;
+
+    function abrirModal(src) {
+      const nomeArquivo = src.split("/").pop(); // pega só piscina1.jpeg
+
+      imagemAtual = imagens.findIndex(img => img.includes(nomeArquivo));
+
+      document.getElementById("modal").style.display = "flex";
+      document.getElementById("imagemModal").src = imagens[imagemAtual];
+    }
+
+
+    function fecharModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+
+    function proximaImagem() {
+      imagemAtual = (imagemAtual + 1) % imagens.length;
+      document.getElementById("imagemModal").src = imagens[imagemAtual];
+    }
+
+    function imagemAnterior() {
+      imagemAtual = (imagemAtual - 1 + imagens.length) % imagens.length;
+      document.getElementById("imagemModal").src = imagens[imagemAtual];
+    }
+
+    document.querySelector(".direita-modal").onclick = proximaImagem;
+    document.querySelector(".esquerda-modal").onclick = imagemAnterior;
+
+    // teclado
+    document.addEventListener("keydown", function (e) {
+      if (document.getElementById("modal").style.display === "flex") {
+        if (e.key === "ArrowRight") proximaImagem();
+        if (e.key === "ArrowLeft") imagemAnterior();
+        if (e.key === "Escape") fecharModal();
+      }
+    });
+
+    // fechar clicando fora da imagem
+    document.getElementById("modal").addEventListener("click", function (e) {
+      if (e.target === this) {
+        fecharModal();
+      }
+    });
+
+    const carrossel = document.getElementById("carrossel");
+    const btnEsquerda = document.querySelector(".seta.esquerda");
+    const btnDireita = document.querySelector(".seta.direita");
+
+    btnDireita.addEventListener("click", () => {
+      carrossel.scrollBy({
+        left: 300,
+        behavior: "smooth"
+      });
+    });
+
+    btnEsquerda.addEventListener("click", () => {
+      carrossel.scrollBy({
+        left: -300,
+        behavior: "smooth"
+      });
+    });
+
+
+  </script>
+
+
+</body>
+
+</html>

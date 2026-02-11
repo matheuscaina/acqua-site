@@ -1,0 +1,462 @@
+/* ===================================================== */
+/* RESET GLOBAL */
+/* ===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* ===================================================== */
+/* MENU PRINCIPAL */
+/* ===================================================== */
+
+.topbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 18px 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.20);
+  backdrop-filter: blur(6px);
+}
+
+.container-menu {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-menu img {
+  height: 65px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
+
+.menu-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.menu-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.menu-links a:hover {
+  opacity: 0.7;
+}
+
+.btn-menu {
+  background: #25d366;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+
+/* ===================================================== */
+/* HERO PRINCIPAL (HOME) */
+/* ===================================================== */
+
+.hero {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.lado {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.jardinagem {
+  background-image: url('img/fundo-jardinagem.jpg');
+}
+
+.piscina {
+  background-image: url('img/fundo-piscina.jpg');
+}
+
+.overlay {
+  background: rgba(0,0,0,0.45);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+
+/* ===================================================== */
+/* BOTÕES */
+/* ===================================================== */
+
+.btn-grande {
+  padding: 15px 40px;
+  font-size: 1.1em;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.btn-grande:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+.verde {
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+}
+
+.verde:hover {
+  background: linear-gradient(135deg, #1b5e20, #145a17);
+}
+
+.azul {
+  background: linear-gradient(135deg, #0288d1, #01579b);
+}
+
+.azul:hover {
+  background: linear-gradient(135deg, #01579b, #014a85);
+}
+
+
+/* ===================================================== */
+/* WHATSAPP FIXO */
+/* ===================================================== */
+
+.whatsapp-fixo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #25d366;
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50px;
+  overflow: hidden;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: width 0.3s ease;
+}
+
+.whatsapp-fixo .icone {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg");
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.whatsapp-fixo .texto {
+  white-space: nowrap;
+  opacity: 0;
+  margin-right: 15px;
+  transition: opacity 0.2s ease;
+}
+
+.whatsapp-fixo:hover {
+  width: 240px;
+}
+
+.whatsapp-fixo:hover .texto {
+  opacity: 1;
+}
+
+
+/* ===================================================== */
+/* PÁGINAS INTERNAS */
+/* ===================================================== */
+
+/* Jardinagem */
+.pagina-jardinagem {
+  background: linear-gradient(
+    180deg,
+    #f1fbf1 0%,
+    #dff5df 45%,
+    #c8ebc8 100%
+  );
+}
+
+/* Piscina */
+.pagina-piscina {
+  background: linear-gradient(
+    180deg,
+    #e6f7ff 0%,
+    #c8ecff 45%,
+    #9fdcff 100%
+  );
+}
+
+
+/* ===================================================== */
+/* BANNER INTERNO */
+/* ===================================================== */
+
+.banner {
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.banner h1 {
+  font-size: 2.8em;
+  font-weight: 700;
+}
+
+.btn-voltar {
+  display: inline-block;
+  margin-top: 15px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.btn-voltar:hover {
+  opacity: 1;
+}
+
+/* Banner Jardinagem */
+.banner-jardinagem {
+  background: url('img/banner-jardinagem.jpg') center/cover no-repeat;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+.banner-jardinagem::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(34, 139, 34, 0.75),
+    rgba(0, 0, 0, 0.55)
+  );
+}
+
+/* Banner Piscina */
+.banner-piscina {
+  background: url('img/banner-piscina.jpg') center/cover no-repeat;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+.banner-piscina::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 40, 90, 0.65),
+    rgba(0, 20, 60, 0.55)
+  );
+}
+
+.banner h1,
+.banner .btn-voltar {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ===================================================== */
+/* CARD CONTEÚDO */
+/* ===================================================== */
+
+.conteudo {
+  background: #ffffff;
+  padding: 60px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  max-width: 900px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.conteudo h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.conteudo p {
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.lista-servicos {
+  list-style: disc;
+  text-align: left;
+  max-width: 500px;
+  margin: 30px auto;
+  font-style: italic;
+}
+
+.lista-servicos li {
+  margin: 12px 0;
+  font-size: 18px;
+}
+
+
+/* ===================================================== */
+/* GALERIA / CARROSSEL */
+/* ===================================================== */
+
+.galeria {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.galeria h2 {
+  font-size: 1.6em;
+  margin-bottom: 25px;
+}
+
+.carrossel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.carrossel {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px;
+}
+
+.carrossel img {
+  height: 220px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.carrossel img:hover {
+  transform: scale(1.05);
+}
+
+.seta {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 28px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+
+/* ===================================================== */
+/* RESPONSIVO */
+/* ===================================================== */
+
+@media (max-width: 900px) {
+  .overlay h1 {
+    font-size: 2.2em;
+  }
+
+  .banner h1 {
+    font-size: 2em;
+  }
+}
+
+/* Topbar totalmente transparente nas páginas internas */
+
+.pagina-jardinagem .topbar,
+.pagina-piscina .topbar {
+  background: transparent;
+  backdrop-filter: none;
+}
+
+/* ===================================================== */
+/* MODAL (VISUAL INSTAGRAM) */
+/* ===================================================== */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-conteudo {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+.fechar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.modal-seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: none;
+  font-size: 35px;
+  padding: 12px 18px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.modal-seta:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+.esquerda-modal {
+  left: 30px;
+}
+
+.direita-modal {
+  right: 30px;
+}
