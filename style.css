@@ -460,3 +460,43 @@
 .direita-modal {
   right: 30px;
 }
+
+.hero {
+  position: relative;
+}
+
+.avaliacao-overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.65);
+  padding: 25px 40px;
+  border-radius: 12px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  z-index: 10;
+}
+
+.avaliacao-overlay h2 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.btn-avaliar-hero {
+  display: inline-block;
+  background: #4285F4;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-avaliar-hero:hover {
+  background: #2f6adf;
+  transform: translateY(-3px);
+}
