@@ -500,3 +500,56 @@
   background: #2f6adf;
   transform: translateY(-3px);
 }
+
+@media (max-width: 768px) {
+
+  /* 🔹 Esconde "Início" no mobile */
+  .menu-links a:first-child {
+    display: none;
+  }
+
+  /* 🔹 Menu mais organizado */
+  .topbar {
+    padding: 10px 0;
+  }
+
+  .logo-menu img {
+    height: 45px;
+  }
+
+  .menu-links {
+    gap: 14px;
+    margin-left: 10px;
+    padding-right: 10px;
+  }
+
+  .menu-links a {
+    font-size: 14px;
+  }
+
+  .btn-menu {
+    padding: 6px 12px;
+    font-size: 13px;
+    margin-left: 6px;
+  }
+
+  /* 🔹 Avaliação menor e mais pra cima */
+  .avaliacao-overlay {
+    padding: 14px 18px;
+    width: 80%;
+    border-radius: 10px;
+    bottom: 90px; /* sobe um pouco */
+  }
+
+  .avaliacao-overlay h2 {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .btn-avaliar-hero {
+    padding: 6px 14px;
+    font-size: 12px;
+    border-radius: 6px;
+  }
+
+}
