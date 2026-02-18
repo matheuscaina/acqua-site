@@ -35,7 +35,7 @@
 
 .logo-menu img {
   height: 65px;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 
 .menu-links {
@@ -90,7 +90,7 @@
 }
 
 .overlay {
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
   height: 100%;
   width: 100%;
   display: flex;
@@ -165,7 +165,7 @@
   overflow: hidden;
   text-decoration: none;
   font-weight: 600;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   z-index: 999;
   transition: width 0.3s ease;
 }
@@ -202,22 +202,18 @@
 
 /* Jardinagem */
 .pagina-jardinagem {
-  background: linear-gradient(
-    180deg,
-    #f1fbf1 0%,
-    #dff5df 45%,
-    #c8ebc8 100%
-  );
+  background: linear-gradient(180deg,
+      #f1fbf1 0%,
+      #dff5df 45%,
+      #c8ebc8 100%);
 }
 
 /* Piscina */
 .pagina-piscina {
-  background: linear-gradient(
-    180deg,
-    #e6f7ff 0%,
-    #c8ecff 45%,
-    #9fdcff 100%
-  );
+  background: linear-gradient(180deg,
+      #e6f7ff 0%,
+      #c8ecff 45%,
+      #9fdcff 100%);
 }
 
 
@@ -261,10 +257,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    rgba(34, 139, 34, 0.75),
-    rgba(0, 0, 0, 0.55)
-  );
+  background: linear-gradient(rgba(34, 139, 34, 0.75),
+      rgba(0, 0, 0, 0.55));
 }
 
 /* Banner Piscina */
@@ -278,10 +272,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    rgba(0, 40, 90, 0.65),
-    rgba(0, 20, 60, 0.55)
-  );
+  background: linear-gradient(rgba(0, 40, 90, 0.65),
+      rgba(0, 20, 60, 0.55));
 }
 
 .banner h1,
@@ -299,7 +291,7 @@
   background: #ffffff;
   padding: 60px 40px;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   max-width: 900px;
   margin: 60px auto;
   text-align: center;
@@ -365,7 +357,7 @@
   border-radius: 14px;
   cursor: pointer;
   transition: 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .carrossel img:hover {
@@ -373,7 +365,7 @@
 }
 
 .seta {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: #fff;
   border: none;
   font-size: 28px;
@@ -423,7 +415,7 @@
   max-width: 90%;
   max-height: 85vh;
   border-radius: 12px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
 .fechar {
@@ -439,7 +431,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   color: #fff;
   border: none;
   font-size: 35px;
@@ -450,7 +442,7 @@
 }
 
 .modal-seta:hover {
-  background: rgba(255,255,255,0.35);
+  background: rgba(255, 255, 255, 0.35);
 }
 
 .esquerda-modal {
@@ -538,7 +530,8 @@
     padding: 14px 18px;
     width: 80%;
     border-radius: 10px;
-    bottom: 90px; /* sobe um pouco */
+    bottom: 90px;
+    /* sobe um pouco */
   }
 
   .avaliacao-overlay h2 {
@@ -557,4 +550,48 @@
 .seo-hidden {
   position: absolute;
   left: -9999px;
+}
+
+.seo-bloco {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    180deg,
+    #f8f9fa 0%,
+    #e9eef2 100%
+  );
+}
+
+.seo-conteudo {
+  background: #ffffff;
+  padding: 60px 60px;
+  max-width: 950px;
+  text-align: center;
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.seo-conteudo h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.seo-conteudo h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  margin: 18px auto 0;
+  background: linear-gradient(90deg, #2e7d32, #0288d1);
+  border-radius: 4px;
+}
+
+.seo-conteudo p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #444;
 }
